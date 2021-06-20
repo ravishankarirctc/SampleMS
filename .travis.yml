@@ -1,0 +1,9 @@
+sudo: required
+services: 
+  - docker
+  
+befor_install: 
+  - docker build -t my-order-ms .
+  
+script: 
+  - docker run my-order-ms mvn clean install -DskipTests
