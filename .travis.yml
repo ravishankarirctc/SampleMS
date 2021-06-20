@@ -6,4 +6,5 @@ befor_install:
   - docker build -t my-order-ms .
   
 script: 
+  - mvn clean install -DskipTests
   - docker run my-order-ms mvn clean install -DskipTests
