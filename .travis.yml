@@ -5,12 +5,11 @@ jdk:
 
 script: mvn clean install -DskipTests
 
-# services: 
-#   - docker
+services: 
+  - docker
   
-# befor_install: 
-#   - docker build -t my-order-ms .
+befor_install: 
+  - docker build -t my-order-ms .
   
-# script: 
-#   - ./mvnw clean install -DskipTests
-#   - docker run my-order-ms
+script: 
+    - docker run my-order-ms
